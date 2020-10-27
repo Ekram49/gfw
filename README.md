@@ -1,13 +1,13 @@
-# Kickstarter App - DS14/15 Build Week
+# Fishing Predictor App
 
-TODO: Refine this readme document + TODO!
+A web app that can predict fishing activity of 'Pole and Line' vessels
 ## Installation
 
 Download the repo and navigate there from the command line:
 
 ```sh
-git clone git@github.com:s2t2/twitoff-15.git
-cd twitoff-15
+git clone https://github.com/Ekram49/gfw.git
+cd gfw
 ```
 
 ## Setup
@@ -25,27 +25,13 @@ pipenv install Flask pandas numpy scikit-learn python-dotenv gunicorn category_e
 
 ## Run the Flask app locally
 
-Via forms
-
 ```sh
+# Mac:
 FLASK_APP=web_app flask run
-```
-Via API
 
-```sh
-python web_app/app.py
-```
-Test the API by running a post request on 'localhost:12345/predict' with the following input
-```sh
-[
-    {"category": "software", "pitch": "i am the goose that lays golden eggs", "a": 1, "b": 20}
-]
-```
-Output should be in the following format
-```
-{
-  "prediction": "[1]"
-}
+# Windows:
+export FLASK_APP=web_app # one-time thing, to set the env var
+flask run
 ```
 
 ## Deploy the app to Heroku
@@ -68,7 +54,7 @@ $ git init
 ```
 
 ```sh
-$ heroku git:remote -a kickstarter-ds15
+$ heroku git:remote -a fishing_predictor
 ```
 Deploy your application
 Commit your code to the repository and deploy it to Heroku using Git.
@@ -82,6 +68,6 @@ Existing Git repository
 For existing repositories, simply add the heroku remote
 
 ```sh
-$ heroku git:remote -a kickstarter-ds15
+$ heroku git:remote -a fishing_predictor
 ```
 
