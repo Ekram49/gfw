@@ -1,10 +1,10 @@
-{% extends "bootstrap_layout.html" %}
+{% extends "bootstrap_layout2.html" %}
 
 {% block content %}
 
-    <h2>Outcome</h2>
+    <h1 style="color:orangered">Outcome</h1>
 
-    <p>Prediction: {{ prediction }}<br>
-        The probability of the vessel fishing = {{ prediction_proba }}%</p>
+    <h2 style="color:navy">Prediction:<span style="color: orangered;"> {{ prediction }}</span><br>
+        The probability of the vessel fishing = <span style="color: orangered;">{{ prediction_proba }}%</span></h2>
 
 {% endblock %}
