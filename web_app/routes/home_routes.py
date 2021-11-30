@@ -67,7 +67,7 @@ def predict_html():
     prediction_text = "Fishing" if prediction[0] == 1 else "Not Fishing"
     print(jsonify(prediction = str(prediction), prediction_proba=prediction_proba[0][1]))
     # return jsonify(features = df_row_dict, prediction = str(prediction), prediction_proba=prediction_proba[0][1])
-    return render_template("prediction_results.html", features = df_row_dict, prediction = str(prediction_text), prediction_proba=prediction_proba[0][1])
+    return render_template("prediction_results.html", features = df_row_dict, prediction = str(prediction_text), prediction_proba=(prediction_proba[0][1])*100)
 
     #TODO: exception handling like for predict_json
     # TODO: should this be consolidted with the predict_json route?
